@@ -18,7 +18,7 @@
 // | ESQ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   LEFT_BRACKET    |
 // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
 // | CAPS |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ADJ |
-//                        | MT(LEFT_ALT, ENTER) | LEFT_GUI | MT(LEFT_SHIFT, SPC) | RSE | ALT |
+//                        | MT(LEFT_ALT, ENTER) | LEFT_GUI | MT(LEFT_SHIFT, SPC) | LT(RSE, BSPC) | LWR |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -29,9 +29,9 @@
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
-// |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |     ~     |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(RET) |
+// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |  )  |       |
+// |    |  LCTRL  |  LEFT_ALT  |  LEFT_GUI  |  LEFT_SHIFT  | "|" |   | PG_Dn | LFT |  DWN | RGT |     |       |
+// |    |  |  |  | |    |   | |  | | | |  |
 //                       |     |     | RET | ADJ |     |
                         bindings = <
    &trans &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &kp DEL
