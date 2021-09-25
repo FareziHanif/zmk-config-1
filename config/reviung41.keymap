@@ -34,10 +34,10 @@
 // |    |  |  |  | |    |   | |  | | | |  |
 //                       |     |     | RET | ADJ |     |
                         bindings = <
-   &trans &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &kp DEL
-   &trans &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp GRAVE &kp GRAVE
-   &trans &kp ESC   &kp LGUI    &kp LALT &kp CLCK &kp SQT        &kp HOME  &kp END  &kp PG_UP &kp PG_DN &kp PSCRN &mt RSHFT RET
-                                 &trans      &trans       &kp RET        &mo 3       &trans
+   &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &none 
+   &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none     &kp PG_DN  &kp LEFT &kp DOWN    &kp RIGHT &none &none
+   &trans &none   &none    &none &none &none        &none  &none  &none &none &none &none
+                                 &trans      &trans       &kp RET        &trans       &trans
                         >;
                 };
 
@@ -49,8 +49,8 @@
 //                       |     | ADJ | BKSP |    |    8 |
                         bindings = <
    &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-   &trans &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp SQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+   &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PERCENT      &kp CARET    &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR    &none 
+   &trans &kp MINUS   &kp PLUS  &kp EQUAL  &kp UNDER  &kp PIPE       &kp BACKSLASH    &kp LBKT     &kp RBKT    &kp LBRC   &kp RBRC   &none
                                 &trans      &mo 3       &kp BSPC        &trans      &trans
                         >;
                 };
