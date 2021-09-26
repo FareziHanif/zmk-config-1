@@ -15,57 +15,57 @@
 
                 default_layer {
 // -------------------------------------------------------------------------------------
-// | ESQ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   LEFT_BRACKET    |
+// | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   CAPS    |
 // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | CAPS |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ADJ |
-//                        | MT(LEFT_ALT, ENTER) | LEFT_GUI | MT(LEFT_SHIFT, SPC) | LT(LWR, BSPC) | RSE |
+// | LGUI |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LALT |
+//                        | RSE | SPC | MT(LEFT_SHIFT, RET) | BSPC | LWR |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp LEFT_BRACKET 
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp CAPS 
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp CAPS  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo 3
-                        &mt LALT RET &kp LGUI &mt LSHFT SPACE &lt 1 BSPC  &mo 2
+   &kp CAPS  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
+                        &mo 2 &kp SPC &mt LSHFT RET &kp BSPC &mo 1
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |  )  |       |
+// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |    | BACKSPACE      |
 // |    |  LCTRL  |  LEFT_ALT  |  LEFT_GUI  |  LEFT_SHIFT  | "|" |   | PG_Dn | LFT |  DWN | RGT |     |       |
-// |    |  |  |  | |    |   | |  | | | |  |
-//                       |     |     | RET | ADJ |     |
+// |    |  |  |  | |    |   | |  | | | | RET |
+//                       |     |     | SHIFT |  |     |
                         bindings = <
-   &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &none 
+   &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &kp BSPC 
    &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none     &kp PG_DN  &kp LEFT &kp DOWN    &kp RIGHT &none &none
-   &trans &none   &none    &none &none &none        &none  &none  &none &none &none &none
-                                 &trans      &trans       &kp RET        &trans       &trans
+   &trans &none   &none    &none &none &none        &none  &none  &none &none &none &kp RET
+                                 &trans      &mo 3       &kp LSHIFT        &trans       &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
+// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  BACKSPACE   |
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
-// |    |  -  |  +  |  =  |  _  |  |  |   |  \  |  [  |  ]  |  {  |  }  |     |
+// |    |  -  |  +  |  =  |  _  |  |  |   |  \  |  [  |  ]  |  {  |  }  |  RETURN   |
 //                       |     | ADJ | BKSP |    |    8 |
                         bindings = <
-   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
    &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PERCENT      &kp CARET    &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR    &none 
-   &trans &kp MINUS   &kp PLUS  &kp EQUAL  &kp UNDER  &kp PIPE       &kp BACKSLASH    &kp LBKT     &kp RBKT    &kp LBRC   &kp RBRC   &none
-                                &trans      &mo 3       &kp BSPC        &trans      &trans
+   &trans &kp MINUS   &kp PLUS  &kp EQUAL  &kp UNDER  &kp PIPE       &kp BACKSLASH    &kp LBKT     &kp RBKT    &kp LBRC   &kp RBRC   &kp RET
+                                &trans      &trans       &kp LSHIFT        &mo 3      &trans
                         >;
                 };
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-//                                              |     |     |  POWER OFF   |     |     |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |   |  BT_NEXT     | BT_PREV    |     |     |     |        |
+// | SLEEP    | SLEEP MODE | POWER OFF | POWER OFF (C) |    |         |   | RESET |     |     |     |     |        |
+//                                              |     |     |     |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &bt BT_NXT        &bt BT_PRV        &none        &none        &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &none
-                                                             &trans      &trans       &kp C_PWR     &trans      &trans
+   &kp C_SLEEP           &kp C_SLEEP_MODE           &kp K_POWER           &kp C_POWER           &none &none              &reset       &none        &none        &none        &none        &none
+                                                             &trans      &trans       &trans    &trans      &trans
                         >;
                 };
         };
