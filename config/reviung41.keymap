@@ -8,11 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define Adjust  3
-#define Wind    4
 
 / {
         keymap {
@@ -25,7 +20,7 @@
 // | LGUI |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LALT |
 //                        | RSE | SPC | MT(LEFT_SHIFT, RET) | BSPC | LWR |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp CAPS 
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &mt RCTRL CAPS 
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LGUI  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
                         &mo 2 &kp SPC &mt LSHFT RET &kp BSPC &mo 1
@@ -41,8 +36,8 @@
                         bindings = <
    &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &kp BSPC 
    &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none     &kp PG_DN  &kp LEFT &kp DOWN    &kp RIGHT &none &none
-   &trans &none   &none    &none &none &none        &none  &none  &none &none &none &kp RET
-                                 &mo 3      &trans       &trans        &trans       &trans
+   &mo 3 &none   &none    &none &none &none        &none  &none  &none &none &none &kp RET
+                                 &trans      &trans       &trans        &trans       &trans
                         >;
                 };
 
@@ -55,8 +50,8 @@
                         bindings = <
    &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERCENT        &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &trans &kp N1 &kp N2 &kp N3  &kp N4  &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &none 
-   &trans &kp MINUS   &kp PLUS  &kp EQUAL  &kp UNDER  &kp PIPE       &kp BACKSLASH    &kp LBKT     &kp RBKT    &kp LBRC   &kp RBRC   &kp RET
-                                &trans      &trans       &trans        &trans      &mo 3
+   &trans &kp MINUS   &kp PLUS  &kp EQUAL  &kp UNDER  &kp PIPE       &kp BACKSLASH    &kp LBKT     &kp RBKT    &kp LBRC   &kp RBRC   &mo 3
+                                &trans      &trans       &trans        &trans      &trans
                         >;
                 };
 
@@ -68,25 +63,10 @@
 //                                              |     |     |     |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &to 1 &to 4              &bt BT_NXT        &bt BT_PRV        &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP
+   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none             &bt BT_NXT        &bt BT_PRV        &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP
    &kp K_SLEEP           &kp K_POWER           &kp C_POWER           &none           &none &reset              &kp C_PREV       &kp C_PP        &kp C_NEXT       &none        &none        &none
                                                              &trans      &trans       &trans    &trans      &trans
                         >;
                 };
-                       
-               wind_layer {
-// ----------------------------------------------------------------------------------
-// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |    | BACKSPACE      |
-// |    |  LCTRL  |  LEFT_ALT  |  LEFT_GUI  |  LEFT_SHIFT  | "|" |   | PG_Dn | LFT |  DWN | RGT |     |       |
-// |    |  |  |  | |    |   | |  | | | | RET |
-//                       | ADJ  |     | MT(LEFT_SHIFT, RET) |  |     |
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp CAPS 
-   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
-                        &mo 2 &kp SPC &mt LSHFT RET &kp BSPC &mo 1
-                        >;
-                };
-
         };
 };
