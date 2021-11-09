@@ -30,12 +30,12 @@
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |    | BACKSPACE      |
+// |    |    |    |   |    |    |  |  PG_UP  |  HOME  | UP | END |    | DELETE   |
 // |    |  LEFT_GUI  |  LEFT_ALT  |  LEFT_CONTROL  |  LEFT_SHIFT  | "|" |   | PG_Dn | LFT |  DWN | RGT |     |       |
 // |    |  |  |  | |    |   | |  | | | | RET |
 //                       | ADJ  |     | MT(LEFT_SHIFT, RET) |  |     |
                         bindings = <
-   &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &kp BSPC 
+   &trans &none  &none      &none &none &none      &kp PG_UP &kp HOME &kp UP    &kp END  &none  &kp DEL
    &trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none     &kp PG_DN  &kp LEFT &kp DOWN    &kp RIGHT &none &none
    &mo 3 &none   &none    &none &none &none        &none  &none  &none &none &none &kp RET
                                  &trans      &trans       &trans        &trans       &trans
